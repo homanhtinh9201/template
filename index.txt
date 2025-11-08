@@ -1,4 +1,4 @@
-vCard - Personal Portfolio
+Tinh Ho Portfolio
 
 # sidebar
 
