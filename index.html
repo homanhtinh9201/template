@@ -713,9 +713,10 @@
     <!-- FILTER LIST -->
     <ul class="filter-list">
       <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
-      <li class="filter-item"><button data-filter-btn>Web design</button></li>
-      <li class="filter-item"><button data-filter-btn>Applications</button></li>
-      <li class="filter-item"><button data-filter-btn>Web development</button></li>
+      <li class="filter-item"><button data-filter-btn>IoT</button></li>
+      <li class="filter-item"><button data-filter-btn>Automotive</button></li>
+      <li class="filter-item"><button data-filter-btn>FPGA</button></li>
+      <li class="filter-item"><button data-filter-btn>Power</button></li>
     </ul>
 
     <!-- FILTER SELECT BOX (mobile) -->
@@ -727,51 +728,83 @@
 
       <ul class="select-list">
         <li class="select-item"><button data-select-item>All</button></li>
-        <li class="select-item"><button data-select-item>Web design</button></li>
-        <li class="select-item"><button data-select-item>Applications</button></li>
-        <li class="select-item"><button data-select-item>Web development</button></li>
+        <li class="select-item"><button data-select-item>IoT</button></li>
+        <li class="select-item"><button data-select-item>Automotive</button></li>
+        <li class="select-item"><button data-select-item>FPGA</button></li>
+        <li class="select-item"><button data-select-item>Power</button></li>
       </ul>
     </div>
 
     <!-- PROJECT LIST -->
     <ul class="project-list">
 
-      <li class="project-item active" data-filter-item data-category="web development" data-project="project1">
+      <!-- IoT Project -->
+      <li class="project-item active" data-filter-item data-category="iot" data-project="project1">
         <a href="#" class="open-project">
           <figure class="project-img">
             <div class="project-item-icon-box">
               <ion-icon name="eye-outline"></ion-icon>
             </div>
-            <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+            <img src="./assets/images/iot-datalogger-thumb.jpg" alt="IoT Data Logger" loading="lazy">
           </figure>
-          <h3 class="project-title">Finance</h3>
-          <p class="project-category">Web development</p>
+          <h3 class="project-title">Industrial IoT Data Logger</h3>
+          <p class="project-category">IoT</p>
         </a>
       </li>
 
-      <li class="project-item active" data-filter-item data-category="web design" data-project="project2">
+      <!-- Automotive Project -->
+      <li class="project-item active" data-filter-item data-category="automotive" data-project="project2">
         <a href="#" class="open-project">
           <figure class="project-img">
             <div class="project-item-icon-box">
               <ion-icon name="eye-outline"></ion-icon>
             </div>
-            <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+            <img src="./assets/images/automotive-gateway-thumb.jpg" alt="Automotive Gateway" loading="lazy">
           </figure>
-          <h3 class="project-title">Fundo</h3>
-          <p class="project-category">Web design</p>
+          <h3 class="project-title">Automotive CAN-FD Gateway</h3>
+          <p class="project-category">Automotive</p>
         </a>
       </li>
 
-      <li class="project-item active" data-filter-item data-category="applications" data-project="project3">
+      <!-- FPGA Project -->
+      <li class="project-item active" data-filter-item data-category="fpga" data-project="project3">
         <a href="#" class="open-project">
           <figure class="project-img">
             <div class="project-item-icon-box">
               <ion-icon name="eye-outline"></ion-icon>
             </div>
-            <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+            <img src="./assets/images/fpga-board-thumb.jpg" alt="FPGA Board" loading="lazy">
           </figure>
-          <h3 class="project-title">Brawlhalla</h3>
-          <p class="project-category">Applications</p>
+          <h3 class="project-title">Custom PCIe FPGA Board</h3>
+          <p class="project-category">FPGA</p>
+        </a>
+      </li>
+
+      <!-- Power Project -->
+      <li class="project-item active" data-filter-item data-category="power" data-project="project4">
+        <a href="#" class="open-project">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/power-supply-thumb.jpg" alt="Power Module" loading="lazy">
+          </figure>
+          <h3 class="project-title">5V/5A Industrial Power Module</h3>
+          <p class="project-category">Power</p>
+        </a>
+      </li>
+
+      <!-- IoT Gateway -->
+      <li class="project-item active" data-filter-item data-category="iot" data-project="project5">
+        <a href="#" class="open-project">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/iot-gateway-thumb.jpg" alt="IoT Gateway CM5" loading="lazy">
+          </figure>
+          <h3 class="project-title">Edge IoT Gateway CM5</h3>
+          <p class="project-category">IoT</p>
         </a>
       </li>
 
@@ -791,7 +824,6 @@
 
 <!-- STYLES -->
 <style>
-  /* Modal layout */
   .modal {
     display: none;
     position: fixed;
@@ -837,37 +869,53 @@
 
 <!-- SCRIPT -->
 <script>
-  // Danh sách nội dung dự án (tùy bạn sửa sau)
   const projectDetails = {
     project1: `
-      <h3>Finance Dashboard</h3>
-      <img src="./assets/images/project-1.jpg" alt="finance">
-      <p><strong>Mô tả:</strong> Trang web quản lý tài chính với dashboard động và biểu đồ thống kê.</p>
-      <p><strong>Mô tả:</strong> Trang web quản lý tài chính với dashboard động và biểu đồ thống kê.</p>
-      <p><strong>Mô tả:</strong> Trang web quản lý tài chính với dashboard động và biểu đồ thống kê.</p>
-      <p><strong>Mô tả:</strong> Trang web quản lý tài chính với dashboard động và biểu đồ thống kê.</p>
-      <p><strong>Mô tả:</strong> Trang web quản lý tài chính với dashboard động và biểu đồ thống kê.</p>
-      <p><strong>Mô tả:</strong> Trang web quản lý tài chính với dashboard động và biểu đồ thống kê.</p>
-      <p><strong>Công nghệ:</strong> HTML, CSS, JavaScript, Chart.js</p>
-      <p><strong>Link demo:</strong> <a href="#">Xem demo</a></p>
-    `,
-    project2: `
-      <h3>Fundo Web Design</h3>
-      <img src="./assets/images/project-3.jpg" alt="fundo">
-      <p><strong>Mô tả:</strong> Thiết kế website hiện đại cho ứng dụng quản lý đầu tư.</p>
-      <p><strong>Công nghệ:</strong> Figma, Adobe XD, HTML</p>
-      <p><strong>Link demo:</strong> <a href="#">Xem thiết kế</a></p>
-    `,
-    project3: `
-      <h3>Brawlhalla App</h3>
-      <img src="./assets/images/project-4.png" alt="brawlhalla">
-      <p><strong>Mô tả:</strong> Ứng dụng mobile quản lý tài khoản và giải đấu.</p>
-      <p><strong>Công nghệ:</strong> React Native, Firebase</p>
+      <h3>Industrial IoT Data Logger</h3>
+      <p><strong>Mô tả:</strong> Thiết bị thu thập dữ liệu công nghiệp, đọc cảm biến 4-20mA và xung, gửi dữ liệu qua 4G (ELS62-W) lên server.</p>
+      <p><strong>Công nghệ:</strong> STM32L476, ELS62-W, Flash AT45DB04E, Modbus RTU/TCP, HTTP/MQTT.</p>
+      <img src="./assets/images/iot-datalogger-pcb.jpg" alt="PCB Design">
+      <img src="./assets/images/iot-datalogger-real.jpg" alt="Thực tế sản phẩm">
       <p><strong>Link demo:</strong> <a href="#">Xem chi tiết</a></p>
+    `,
+
+    project2: `
+      <h3>Automotive CAN-FD Gateway</h3>
+      <p><strong>Mô tả:</strong> Gateway trung gian giữa các ECU trên xe, hỗ trợ CAN-FD và Ethernet để ghi log dữ liệu.</p>
+      <p><strong>Công nghệ:</strong> STM32H7, CAN-FD transceiver, Ethernet PHY, SD Card logging, FreeRTOS.</p>
+      <img src="./assets/images/automotive-gateway-pcb.jpg" alt="PCB Design">
+      <img src="./assets/images/automotive-gateway-real.jpg" alt="Thực tế sản phẩm">
+      <p><strong>Link demo:</strong> <a href="#">Tài liệu dự án</a></p>
+    `,
+
+    project3: `
+      <h3>Custom PCIe FPGA Board</h3>
+      <p><strong>Mô tả:</strong> Bo mạch FPGA tùy chỉnh với giao tiếp PCIe x4, dùng cho xử lý tín hiệu tốc độ cao.</p>
+      <p><strong>Công nghệ:</strong> Xilinx Artix-7, PCIe Gen2, DDR3, High-speed differential pair routing.</p>
+      <img src="./assets/images/fpga-board-pcb.jpg" alt="PCB Design">
+      <img src="./assets/images/fpga-board-real.jpg" alt="Thực tế sản phẩm">
+      <p><strong>Link demo:</strong> <a href="#">Tài liệu kỹ thuật</a></p>
+    `,
+
+    project4: `
+      <h3>5V/5A Industrial Power Module</h3>
+      <p><strong>Mô tả:</strong> Bộ nguồn chuyển mạch DC-DC cho hệ thống công nghiệp, đầu vào 9–24V, đầu ra 5V/5A ổn định.</p>
+      <p><strong>Công nghệ:</strong> Synchronous Buck, MOSFET N-channel, feedback compensation, EMI filter.</p>
+      <img src="./assets/images/power-supply-pcb.jpg" alt="PCB Design">
+      <img src="./assets/images/power-supply-real.jpg" alt="Thực tế sản phẩm">
+      <p><strong>Link demo:</strong> <a href="#">Datasheet & Demo</a></p>
+    `,
+
+    project5: `
+      <h3>Edge IoT Gateway CM5</h3>
+      <p><strong>Mô tả:</strong> Gateway biên công nghiệp dùng Raspberry Pi CM5, hỗ trợ LTE, Zigbee, LoRa, Ethernet.</p>
+      <p><strong>Công nghệ:</strong> Raspberry Pi CM5, M.2 LTE, PCIe, PoE, Ubuntu Server, Docker, Node-RED.</p>
+      <img src="./assets/images/iot-gateway-pcb.jpg" alt="PCB Design">
+      <img src="./assets/images/iot-gateway-real.jpg" alt="Thực tế sản phẩm">
+      <p><strong>Link demo:</strong> <a href="#">Xem demo</a></p>
     `
   };
 
-  // Xử lý click vào project
   const openButtons = document.querySelectorAll('.open-project');
   const modal = document.getElementById('project-modal');
   const modalContent = document.getElementById('project-detail');
@@ -882,11 +930,9 @@
     });
   });
 
-  // Đóng modal
   closeModal.onclick = () => { modal.style.display = 'none'; };
   window.onclick = (event) => { if (event.target == modal) modal.style.display = 'none'; };
 </script>
-
 
 
 
